@@ -1,0 +1,34 @@
+.container {
+  background: aquamarine;
+  width: 500px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin: 100px;
+}
+
+/* condicional css */
+.container:hover .square {
+  transform: scale(1.2);
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+}
+
+.square.one {
+  background: red;
+  /* nombre de la propiedad + duracioon */
+  transition: transform 0.33s;
+}
+
+.square.two {
+  background: blue;
+  transition: transform 0.66s;
+}
+
+.square.three {
+  background: rgb(47, 255, 61);
+  transition: transform 1s;
+}
