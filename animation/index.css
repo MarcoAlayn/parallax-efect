@@ -1,0 +1,42 @@
+.container {
+  position: relative;
+}
+
+.parche {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(230, 221, 165);
+  top: 99px;
+  left: 72px;
+  /* border: 0.1px solid rgba(0, 0, 0, 0.301); */
+}
+
+.eye {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(37, 37, 37);
+  top: 99px;
+  left: 73px;
+  z-index: 1;
+  animation-name: eye;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes eye {
+  0% {
+    height: 18px;
+  }
+  5% {
+    height: 10px;
+    top: 108px;
+  }
+  10% {
+    height: 3px;
+    top: 108px;
+  }
+}
