@@ -1,5 +1,17 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
 .container {
   position: relative;
+}
+
+.container img {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: -3;
 }
 
 .parche {
@@ -10,7 +22,7 @@
   background: rgb(230, 221, 165);
   top: 99px;
   left: 72px;
-  /* border: 0.1px solid rgba(0, 0, 0, 0.301); */
+  z-index: -2;
 }
 
 .eye {
@@ -18,10 +30,11 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: rgb(37, 37, 37);
+  background: rgb(0, 0, 0);
   top: 99px;
-  left: 73px;
-  z-index: 1;
+  left: 72px;
+  z-index: -1;
+  will-change: height;
   animation-name: eye;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -38,5 +51,68 @@
   10% {
     height: 3px;
     top: 108px;
+  }
+}
+
+.container .loader {
+  width: 1440px;
+  height: 100vh;
+  background: red;
+  display: flex;
+
+  animation: loader 2s linear forwards;
+}
+
+.container .loader :nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.container .loader :nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.container .loader :nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.container .loader :nth-child(3) {
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  95% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.container .loader div {
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 10px;
+  scale: (1);
+  will-change: scale;
+  animation: scalling 2s ease-in-out infinite;
+}
+
+@keyframes scalling {
+  0%,
+  100% {
+    transform: scale(0.2);
+  }
+  40% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1);
   }
 }
