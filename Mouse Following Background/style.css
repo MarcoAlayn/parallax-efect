@@ -1,0 +1,67 @@
+/* #1 body reset */
+body {
+  min-height: 200vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header setup */
+header {
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* #2 moving background setup */
+header .box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("./assets/astronaut.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 130%;
+  height: 130%;
+  filter: brightness(30%);
+}
+
+/* #3 header text-styles */
+header .content {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+}
+
+header .content h1 {
+  font-size: 4em;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+header .content p {
+  margin-bottom: 2.5em;
+  color: #9ea2a5;
+  font-size: 1.2em;
+}
+
+/* #4 button styles */
+header .btn {
+  text-decoration: none;
+  color: aliceblue;
+  background: #ee1818;
+  padding: 0.8em 1.5em;
+  border: 3px #f52535 solid;
+  border-radius: 30px;
+  letter-spacing: 0.3rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .btn:hover {
+  background: #d31010;
+}
